@@ -1,6 +1,6 @@
 ---
 - hosts: "{{ hosts }}"
-  #become: true
+  become: true
   tasks:
    - name: Stop service crond
      service:
