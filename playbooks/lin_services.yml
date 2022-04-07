@@ -2,8 +2,8 @@
 - hosts: "{{ hosts }}"
   #become: true
   tasks:
-   - name: Stop service firewalld
+   - name: Stop service crond
      service:
-      name: firewalld
+      name: crond
       state: stopped
       enabled: no
