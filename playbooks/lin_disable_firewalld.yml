@@ -1,0 +1,9 @@
+---
+- hosts: "{{ hosts }}"
+  #become: true
+  tasks:
+   - name: Stop service firewalld
+     service:
+      name: firewalld
+      state: stopped
+      enabled: no
