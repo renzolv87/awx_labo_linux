@@ -1,0 +1,5 @@
+---
+- hosts: "{{ hosts }}"
+  tasks:
+    - name: validamos conexion al servidor linux {{ hosts }}
+      ping:
