@@ -1,2 +1,2 @@
-- src: git@github.com:renzolv87/awx_labo_linux.git
+- src: https://github.com/renzolv87/awx_labo_linux.git
   role: apache
