@@ -6,7 +6,7 @@
      copy:
        dest: "/var/tmp/{{ filename }}"
        content: "{{ contenido }}"
-     when: content is defined
+     when: contenido is defined
    - name: Nos aseguramos que el grupo {{ filegroup }} existe
      group:
        name: "{{ filegroup }}"
