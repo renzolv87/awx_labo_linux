@@ -6,8 +6,6 @@
      copy:
        dest: "/var/tmp/{{ filename }}"
        content: "{{ contenido }}"
-     when: contenido is defined
-
    - name: Seteamos permisos {{ filemode }}, {{ fileowner }}:{{ filegroup }} a fichero
      file:
        path: "/var/tmp/{{ filename }}"
