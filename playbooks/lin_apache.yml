@@ -1,4 +1,4 @@
 ---
 - hosts: "{{ hosts }}"
   roles:
-    - apache
+    - lin_apache
