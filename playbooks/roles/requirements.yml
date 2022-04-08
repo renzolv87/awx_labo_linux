@@ -1,0 +1,5 @@
+-
+  src: git@github.com:renzolv87/awx_labo_linux.git
+  scm: git
+  name: apache
+  role: apache
