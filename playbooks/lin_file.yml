@@ -6,6 +6,14 @@
      copy:
        dest: "/var/tmp/{{ filename }}"
        content: "{{ contenido }}"
+   - name: Nos aseguramos que el grupo {{ filegroup }} existe
+     group:
+       name: "{{ filegroup }}"
+       state: present
+   - name: Nos aseguramos que el usuario {{ fileowner }} existe
+     user:
+       name: "{{ fileowner }}"
+       comment: "usuario creado por ansible"
    - name: Seteamos permisos {{ filemode }}, {{ fileowner }}:{{ filegroup }} a fichero
      file:
        path: "/var/tmp/{{ filename }}"
