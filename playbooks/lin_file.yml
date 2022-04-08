@@ -1,0 +1,14 @@
+---
+- hosts: "{{ hosts }}"
+  become: true
+  tasks:
+   - name: Crear fichero {{ filename }} con contenido
+     copy:
+       dest: "/var/tmp/{{ filename }}"
+       content: "{{ contenido }}"
+   - name: Seteamos permisos {{ filemode }}, {{ fileowner }}:{{ filegroup }} a fichero
+     file:
+       path: "/var/tmp/{{ filename }}"
+       owner: "{{ fileowner }}"
+       group: "{{ filegroup }}"
+       mode: "{{ filemode }}"
