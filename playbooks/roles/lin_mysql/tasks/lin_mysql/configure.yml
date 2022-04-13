@@ -1,17 +1,11 @@
 ---
-- name: "levantamos el servicio {{ mysql_service }} y lo configuramos en el arranque"
-  service:
-    name: "{{ mysql_service }}"
-    state: started
-    enabled: yes
-
 - name: configuramos cuentas para administrar mysql
   mysql_user:  
-    name: "{{ mysql_root.name }}"  
+    name: "{{ mysql_users[0].name }}"  
     host: "{{ hosts }}"  
-    password: "{{ mysql_root.password }}"  
-    login_user: "{{ mysql_user.name }}"  
-    login_password: "{{ mysql_user.password }}"
+    password: "{{ mysql_users[0].password }}"  
+    login_user: "{{ mysql_users[1].name }}"  
+    login_password: "{{ mysql_users[1].password }}"
     check_implicit_admin: yes  
     priv: "*.*:ALL,GRANT"
 
@@ -19,8 +13,8 @@
   mysql_db: 
     name: testdb
     state: present
-    login_user: "{{ mysql_user.name }}"
-    login_password: "{{ mysql_user.password }}"
+    login_user: "{{ mysql_users[1].name }}"
+    login_password: "{{ mysql_users[1].password }}"
 
 - name: copiamos un dump que tenemos para insertar en testdb
   copy:
@@ -32,7 +26,7 @@
     name: testdb
     state: import
     target: /tmp/dump.sql
-    login_user: "{{ mysql_user.name }}"
-    login_password: "{{ mysql_user.password }}"
+    login_user: "{{ mysql_users[1].name }}"
+    login_password: "{{ mysql_users[1].password }}"
 
 

@@ -8,14 +8,20 @@
 
 - name: creo el grupo para mysql 
   group:
-    name: "{{ mysql_user.group }}" 
+    name: "{{ mysql_users[1].group }}" 
     state: present
 
 - name: creo usuario para mysql
   user:
-    name: "{{ mysql_user.name }}"
-    password: "{{ mysql_user.password }}"
+    name: "{{ mysql_users[1].name }}"
+    password: "{{ mysql_users[1].password }}"
     shell: /bin/bash
-    groups: "{{ mysql_user.group }}"
+    groups: "{{ mysql_users[1].group }}"
     append: yes
     expires: -1
+
+- name: "levantamos el servicio {{ mysql_service }} y lo configuramos en el arranque"
+  service:
+    name: "{{ mysql_service }}"
+    state: started
+    enabled: yes

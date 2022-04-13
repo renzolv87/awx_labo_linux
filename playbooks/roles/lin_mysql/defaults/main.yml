@@ -5,13 +5,11 @@ mysql_packages:
 
 mysql_service: mysql 
 
-mysql_root:
+mysql_users: 
   - name: root
     password: >-
       $6$iat5PbLFoC9u7RAn$9OlcetRlZQSCgizb5IaUkV22pRLczgkrLaGFS3ZBP976rNi6CQORgyoX2AfUuy4K.vxNi62LQiMd91w/YSaDe/
     #Esto es roottsys
-
-mysql_user: 
   - name: mysql
     group: mysql
     password: >-
