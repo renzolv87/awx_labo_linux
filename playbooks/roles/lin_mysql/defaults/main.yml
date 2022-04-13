@@ -1,0 +1,21 @@
+---
+# defaults file for apache
+mysql_package: 
+- mysql
+
+mysql_service: mysql 
+
+mysql_root: 
+ - name: root
+ - password: >-
+     $6$iat5PbLFoC9u7RAn$9OlcetRlZQSCgizb5IaUkV22pRLczgkrLaGFS3ZBP976rNi6CQORgyoX2AfUuy4K.vxNi62LQiMd91w/YSaDe/
+   #Esto es roottsys
+
+mysql_user: 
+ - name: mysql
+ - group: mysql
+ - password: >-
+     $6$Lz0ShSy.zUb/Z2ay$g.rEdQw3KKXE8If.86EGI7/eu5sdEk4lK2HbYBw1ACgu9awicOMI3Qw2sADmH4pQojB4Of57B2QxB7TIMX/5H1
+   #Esto es mysqltsys
+   #python3 -c 'import crypt,getpass;pw=getpass.getpass();print(crypt.crypt(pw) if (pw==getpass.getpass("Confirm: ")) else exit())'
+   #https://computingforgeeks.com/generate-linux-user-encrypted-password-for-ansible/

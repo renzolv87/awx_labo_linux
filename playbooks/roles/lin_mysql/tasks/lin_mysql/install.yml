@@ -1,0 +1,21 @@
+---
+#instalamos httpd
+- name: instalamos mysql
+  package: 
+    name: "{{ item }}"
+    #state: latest
+  with_items: "{{ apache_package }}"
+
+- name: creo el grupo para mysql 
+  group:
+    name: "{{ mysql_user.group }}" 
+    state: present
+
+- name: creo usuario para mysql
+  user:
+    name: "{{ mysql_user.name }}"
+    password: "{{ mysql_user.password }}"
+    shell: /bin/bash
+    groups: "{{ mysql_user.group }}"
+    append: yes
+    expires: -1

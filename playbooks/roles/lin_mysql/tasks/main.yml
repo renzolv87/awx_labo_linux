@@ -1,0 +1,7 @@
+---
+# tasks file for apache
+- import_tasks: lin_mysql/install.yml
+  tags: lin_mysql_install
+
+- import_tasks: lin_mysql/configure.yml
+  tags: lin_mysql_configure
