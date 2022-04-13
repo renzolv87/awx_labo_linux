@@ -1,4 +1,5 @@
 ---
 - hosts: "{{ hosts }}"
+  become: true
   roles:
     - lin_mysql
