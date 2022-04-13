@@ -1,6 +1,6 @@
 ---
 # defaults file for apache
-mysql_package: 
+mysql_packages: 
 - mysql
 
 mysql_service: mysql 

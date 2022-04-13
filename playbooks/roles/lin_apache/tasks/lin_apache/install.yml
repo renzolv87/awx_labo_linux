@@ -4,4 +4,4 @@
   package: 
     name: "{{ item }}"
     #state: latest
-  with_items: "{{ apache_package }}"
+  with_items: "{{ apache_packages }}"
