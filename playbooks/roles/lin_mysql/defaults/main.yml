@@ -2,8 +2,10 @@
 # defaults file for apache
 mysql_packages: 
   - mysql
+  - mysql-server
+  - mysql-common
 
-mysql_service: mysql 
+mysql_service: mysqld 
 
 mysql_users: 
   - name: root
