@@ -4,6 +4,7 @@ mysql_packages:
   - mysql
   - mysql-server
   - mysql-common
+  - python3-PyMySQL
 
 mysql_service: mysqld 
 

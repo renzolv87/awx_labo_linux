@@ -2,12 +2,17 @@
 - name: configuramos cuentas para administrar mysql
   mysql_user:  
     name: "{{ mysql_users[0].name }}"  
-    host: "{{ hosts }}"  
+    host: "{{ item }}"  
     password: "{{ mysql_users[0].password }}"  
     login_user: "{{ mysql_users[1].name }}"  
     login_password: "{{ mysql_users[1].password }}"
     check_implicit_admin: yes  
     priv: "*.*:ALL,GRANT"
+  with_items: 
+  - "{{ ansible_hostname }}"  
+  - 127.0.0.1  
+  - ::1  
+  - localhost
 
 - name: creamos una base de datos con nombre testdb
   mysql_db: 
