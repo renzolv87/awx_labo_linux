@@ -2,7 +2,7 @@
 - hosts: "{{ hosts }}"
   become: true
   tasks:
-  - name: creamos lv {{ lvname }} en vg {{ vgname }}
+  - name: "creamos lv {{ lvname }} en vg {{ vgname }}"
     lvol:
       vg: "{{ vgname }}" 
       lv: "{{ lvname }}"
@@ -11,7 +11,7 @@
     filesystem:
       fstype: "{{ fstype }}"
       dev: "/dev/{{ vgname }}/{{ lvname }}"
-  - name: montamos el fs {{ fsname }}
+  - name: "montamos el fs {{ fsname }}"
     mount:
       path: "{{ fsname }}"
       src: "/dev/{{ vgname }}/{{ lvname }}"
