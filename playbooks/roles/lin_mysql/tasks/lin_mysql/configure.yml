@@ -31,7 +31,7 @@
     name: testdb
     state: import
     target: /tmp/dump.sql
-    login_user: "{{ mysql_users[1].name }}"
+    login_user: "{{ mysql_users[0].name }}"
     login_password: "{{ mysql_users[0].password }}"
 
 
