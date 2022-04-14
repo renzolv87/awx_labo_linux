@@ -6,20 +6,6 @@
     #state: latest
   with_items: "{{ mysql_packages }}"
 
-- name: creo el grupo para mysql 
-  group:
-    name: "{{ mysql_users[1].group }}" 
-    state: present
-
-- name: creo usuario para mysql
-  user:
-    name: "{{ mysql_users[1].name }}"
-    password: "{{ mysql_users[1].password }}"
-    shell: /bin/bash
-    groups: "{{ mysql_users[1].group }}"
-    append: yes
-    expires: -1
-
 - name: "levantamos el servicio {{ mysql_service }} y lo configuramos en el arranque"
   service:
     name: "{{ mysql_service }}"
