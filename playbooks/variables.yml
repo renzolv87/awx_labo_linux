@@ -1,0 +1,6 @@
+---
+- hosts: "{{ hosts }}"
+  tasks:
+    - name: validamos valor de var
+      debug:
+        msg: "El valor es: '{{ var }}'"
