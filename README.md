@@ -6,10 +6,10 @@
 
 # Servidores de Laboratorio
 <pre>
-windows01 192.168.17.3            linux01	192.168.17.4	
-windows02 192.168.17.5            linux02	192.168.17.6
-windows03 192.168.17.7            linux03	192.168.17.8
-windows04 192.168.17.9            linux04	192.168.17.10
-windows05 192.168.17.11           linux05	192.168.17.12
-windows06 192.168.17.13           linux06	192.168.17.14
+windows01 192.168.17.3            linux01 192.168.17.4	
+windows02 192.168.17.5            linux02 192.168.17.6
+windows03 192.168.17.7            linux03 192.168.17.8
+windows04 192.168.17.9            linux04 192.168.17.10
+windows05 192.168.17.11           linux05 192.168.17.12
+windows06 192.168.17.13           linux06 192.168.17.14
 </pre>
