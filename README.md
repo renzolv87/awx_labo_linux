@@ -13,3 +13,21 @@ windows04 192.168.17.9            linux04 192.168.17.10
 windows05 192.168.17.11           linux05 192.168.17.12
 windows06 192.168.17.13           linux06 192.168.17.14
 </pre>
+
+## Windows setup
+<pre>
+C:\Windows\Ansible> .\setup.ps1 192.168.17.3 24 192.168.17.1
+C:\Windows\Ansible> .\ConfigureWinRMforAnsible.ps1
+
+borrar config:
+C:\Windows\Ansible> .\clean.ps1
+</pre>
+
+## Linux setup
+<pre>
+cd /home/rlujan/scripts
+./setup.sh linux01 192.168.17.4 24 192.168.17.1
+./ansible_setup.sh
+
+borrar config: clean.sh; ansible_clean.sh
+</pre>
