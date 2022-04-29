@@ -6,12 +6,19 @@
 
 # Servidores de Laboratorio
 <pre>
-windows01 192.168.17.3            linux01 192.168.17.4	
-windows02 192.168.17.5            linux02 192.168.17.6
-windows03 192.168.17.7            linux03 192.168.17.8
-windows04 192.168.17.9            linux04 192.168.17.10
-windows05 192.168.17.11           linux05 192.168.17.12
-windows06 192.168.17.13           linux06 192.168.17.14
+Gustavo Zafra   windows02  	192.168.17.202
+Roberto Bermejo	windows03		192.168.17.203
+
+Josep Mª Bean		linux02			192.168.17.102
+Yolanda Vera		linux03			192.168.17.103
+Diana Bolivar		linux04			192.168.17.104
+Aitor Oliveira	linux05			192.168.17.105
+Diego Gomez			linux06			192.168.17.106
+Roger Roca			linux07			192.168.17.107
+Sergio Garrido	linux08			192.168.17.108
+Xavier Gadea		linux09			192.168.17.109
+Javier Garcia		linux10			192.168.17.110
+Pablo Bazan			linux11			192.168.17.111
 </pre>
 
 ## Windows setup
