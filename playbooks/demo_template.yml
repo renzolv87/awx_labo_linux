@@ -1,0 +1,13 @@
+---
+- hosts: "{{ hosts }}"
+  become: true
+  tasks:
+    - name: creamos nuestro template
+      template:
+        src: "/var/tmp/linux_file.conf.j2"
+        dest: "/var/tmp/file.conf"
+        owner: root
+        group: root
+        mode: '0644'
+
+
