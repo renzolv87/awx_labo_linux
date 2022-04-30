@@ -1,0 +1,21 @@
+---
+- hosts: "{{ hosts }}"
+  become: true
+  handlers:
+    - name: restart apache
+      service:
+        name: httpd
+        state: restarted
+      listen: "restart web"
+  tasks:
+    - name: create dir /opt/www
+      file: 
+        path: /opt/www
+        state: directory
+    - name: change config
+      replace: 
+        path: /etc/httpd/conf/httpd.conf
+        regexp: '^DocumentRoot.*$'
+        replace: 'DocumentRoot "/opt/www"'
+        backup: yes
+      notify: "restart web"
