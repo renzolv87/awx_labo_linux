@@ -6,16 +6,25 @@
       package: 
         name: httpd
         state: latest
+      tags: install
     - name: start and enable httpd
       service:
         name: httpd
         state: started
         enabled: yes
+      tags: config
     - name: create index.html
       file:
         path: /var/www/html/index.html
         state: touch
+      tags: config
     - name: add a line to index.html
       copy:
         content: "Hello World!"
         dest: /var/www/html/index.html
+      tags: config
+    - name: uninstall apache
+      package: 
+        name: httpd
+        state: absent
+      tags: uninstall
