@@ -1,0 +1,12 @@
+---
+- hosts: "{{ hosts }}"
+  become: true
+  tasks:
+    - name: get files
+      uri:
+        url: "http://{{ item }}"
+      ignore_errors: true
+      with_items:
+        - linux01
+        - linux02
+        - linux03

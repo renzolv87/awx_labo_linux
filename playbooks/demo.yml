@@ -22,5 +22,5 @@
     - name: uninstall apache
       package: 
         name: httpd
-        state: latest
+        state: absent
       tags: never,uninstall
