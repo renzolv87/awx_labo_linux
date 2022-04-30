@@ -1,0 +1,19 @@
+---
+- hosts: "{{ hosts }}"
+  become: true
+  tasks:
+    - name: get files
+      block:
+      - uri:
+          url: "http://{{ item }}"
+        with_items: 
+        - linux01
+        - linux02
+        - linux03
+      rescue:
+        - debug:
+            msg: "Debes levantar apache"
+      always:
+        - debug:
+            msg: "Siempre ejecuto esto"
+       
