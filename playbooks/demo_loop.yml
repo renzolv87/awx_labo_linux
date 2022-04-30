@@ -12,4 +12,15 @@
         - rlujan
         - dbolivar
         - aitolive    
-
+    - name: copy files
+      copy:
+        src: "/var/tmp/{{ item }}"
+        dest: "/var/tmp/{{ item }}"
+        owner: rlujan
+        group: rlujan
+        mode: '0600'
+        remote_src: no
+      with_items:
+        - file1.txt
+        - file2.txt
+        - file3.txt
