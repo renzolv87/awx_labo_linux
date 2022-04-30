@@ -1,0 +1,26 @@
+---
+- hosts: "{{ hosts }}"
+  become: true
+  tasks:
+    - name: install apache
+      package: 
+        name: httpd
+        state: latest
+    - name: start and enable httpd
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+    - name: create index.html
+      file:
+        path: /var/www/html/index.html
+        state: touch
+    - name: add a line to index.html
+      copy:
+        content: "Hello World!"
+        dest: /var/www/html/index.html
+    - name: uninstall apache
+      package: 
+        name: httpd
+        state: latest
+      tags: never,uninstall

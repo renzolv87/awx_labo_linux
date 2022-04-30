@@ -5,5 +5,5 @@
    - name: Stop service crond
      service:
       name: crond
-      state: stopped
+      state: started
       enabled: no
