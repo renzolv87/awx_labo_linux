@@ -2,8 +2,8 @@
 - hosts: "{{ hosts }}"
   become: true
   tasks:
-    - name: create dir /opt/www
+    - name: create dir /var/tmp/prueba_when
       file: 
-        path: /opt/www
+        path: /var/tmp/prueba_when
         state: directory
       when: ansible_default_ipv4.address == "192.168.17.101"
