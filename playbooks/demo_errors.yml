@@ -4,9 +4,6 @@
   tasks:
     - name: get files
       uri:
-        url: "http://{{ item }}"
+        url: "http://{{ hosts }}"
       ignore_errors: true
-      with_items:
-        - linux01
-        - linux02
-        - linux03
+   
