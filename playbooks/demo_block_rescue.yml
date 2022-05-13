@@ -5,11 +5,7 @@
     - name: get files
       block:
       - uri:
-          url: "http://{{ item }}"
-        with_items: 
-        - linux01
-        - linux02
-        - linux03
+          url: "http://{{ hosts }}"
       rescue:
         - debug:
             msg: "Debes levantar apache"
