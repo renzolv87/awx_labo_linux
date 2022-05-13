@@ -24,3 +24,10 @@
         - file1.txt
         - file2.txt
         - file3.txt
+    - name: creamos usuarios
+      debug:
+        msg: "usuario {{ item.user }} y con grupo {{ item.group }}"
+      with_items:
+        - { user: 'rlujan', group: 'unix' }
+        - { user: 'dbolivar', group: 'db' }
+
