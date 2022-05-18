@@ -1,0 +1,49 @@
+---
+- hosts: "{{ hosts }}"
+  vars:
+    nombre: joan
+    empleado:
+      nombre: pedro
+      wiw: 10
+      grupo: test 
+    empleados:
+      - nombre: pedro
+        wiw: 10
+        grupo: test
+      - nombre: marc
+        wiw: 11
+        grupo: dev
+  tasks:
+    - name: analizamos variable nombre
+      debug:
+        msg: "{{ nombre }}"
+ 
+    - name: analizamos variable empleado
+      debug:
+        msg: 
+          - "nombre: {{ empleado.nombre }}"
+          - "wiw: {{ empleado.wiw }}"
+          - "grupo: {{ empleado.grupo }}"
+
+    - name: analizamos 2 variable empleado
+      debug:
+        msg: 
+          - "nombre: {{ empleado['nombre'] }}"
+          - "wiw: {{ empleado['nombre'] }}"
+          - "grupo: {{ empleado['grupo'] }}"
+      
+    - name: analizamos variable empleados
+      debug:
+        msg: 
+          - "nombre: {{ empleados[1].nombre }}"
+          - "wiw: {{ empleados[1].wiw }}"
+          - "grupo: {{ empleados[1].grupo }}"
+
+    - name: analizamos2 variable empleados
+      debug:
+        msg: 
+          - "nombre: {{ item.nombre }}"
+          - "wiw: {{ item.wiw }}"
+          - "grupo: {{ item.grupo }}"
+      with_items:
+        - "{{ empleados }}"
