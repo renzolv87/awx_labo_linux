@@ -7,13 +7,16 @@
       vg: "{{ vgname }}" 
       lv: "{{ lvname }}"
       size: "{{ size }}"
+    when: vgname is defined and lvname is defined and size is defined
   - name: Create fs test1
     filesystem:
       fstype: "{{ fstype }}"
       dev: "/dev/{{ vgname }}/{{ lvname }}"
+    when: vgname is defined and lvname is defined 
   - name: "montamos el fs {{ fsname }}"
     mount:
       path: "{{ fsname }}"
       src: "/dev/{{ vgname }}/{{ lvname }}"
       fstype: "{{ fstype }}"
       state: mounted
+    when: vgname is defined and lvname is defined and fs name is defined and fstype is defined
