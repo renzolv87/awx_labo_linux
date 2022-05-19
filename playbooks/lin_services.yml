@@ -2,8 +2,8 @@
 - hosts: "{{ hosts }}"
   become: true
   tasks:
-   - name: Stop service crond
+   - name: {{ accion }} service {{ servicio }}
      service:
-      name: crond
-      state: started
-      enabled: no
+      name: "{{ servicio }}"
+      state: "{{ accion }}"
+      
