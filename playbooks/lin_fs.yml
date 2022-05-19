@@ -19,4 +19,4 @@
       src: "/dev/{{ vgname }}/{{ lvname }}"
       fstype: "{{ fstype }}"
       state: mounted
-    when: vgname is defined and lvname is defined and fs name is defined and fstype is defined
+    when: vgname is defined and lvname is defined and fsname is defined and fstype is defined
