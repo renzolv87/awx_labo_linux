@@ -11,13 +11,16 @@
      group:
        name: "{{ filegroup }}"
        state: present
+     when: filegroup is defined
    - name: Nos aseguramos que el usuario {{ fileowner }} existe
      user:
        name: "{{ fileowner }}"
        comment: "usuario creado por ansible"
+     when: fileowner is defined
    - name: Seteamos permisos {{ filemode }}, {{ fileowner }}:{{ filegroup }} a fichero
      file:
        path: "/var/tmp/{{ filename }}"
        owner: "{{ fileowner }}"
        group: "{{ filegroup }}"
        mode: "{{ filemode }}"
+     when: fileowner is defined and filegroup is defined and filemode is defined
