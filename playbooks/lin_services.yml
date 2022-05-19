@@ -2,7 +2,7 @@
 - hosts: "{{ hosts }}"
   become: true
   tasks:
-   - name: {{ accion }} service {{ servicio }}
+   - name: "{{ accion }} service {{ servicio }}"
      service:
       name: "{{ servicio }}"
       state: "{{ accion }}"
