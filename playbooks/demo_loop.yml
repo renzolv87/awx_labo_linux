@@ -30,4 +30,3 @@
       with_items:
         - { user: 'rlujan', group: 'unix' }
         - { user: 'dbolivar', group: 'db' }
-
