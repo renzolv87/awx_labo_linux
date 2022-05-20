@@ -2,14 +2,15 @@
 - hosts: "{{ hosts }}"
   become: true
   tasks:
-    - name: get files
+    - name: validar conexion a apache
       block:
-      - uri:
-          url: "http://{{ hosts }}"
+        - uri:
+            url: "http://{{ hosts }}"
       rescue:
-        - debug:
-            msg: "Debes levantar apache"
+        - service:
+            name: httpd
+            state: started
       always:
-        - debug:
-            msg: "Siempre ejecuto esto"
-       
+        - uri:
+            url: "http://{{ hosts }}"
+      
