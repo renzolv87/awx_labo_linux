@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  serial:
+  - 1 
+  - 2
+  - 50%
+  tasks:
+    - name: get files
+      uri:
+        url: "http://{{ inventory_hostname }}"
