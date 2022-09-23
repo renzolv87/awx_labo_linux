@@ -23,7 +23,7 @@ Pablo Bazan     linux11   192.168.17.111
 
 ## Windows setup
 <pre>
-C:\Windows\Ansible> .\setup.ps1 192.168.17.3 24 192.168.17.1
+C:\Windows\Ansible> .\setup.ps1 192.168.17.2XX 24 192.168.17.1
 C:\Windows\Ansible> .\ConfigureWinRMforAnsible.ps1
 
 borrar config:
@@ -33,7 +33,7 @@ C:\Windows\Ansible> .\clean.ps1
 ## Linux setup
 <pre>
 cd /home/rlujan/scripts
-./setup.sh linux01 192.168.17.4 24 192.168.17.1
+./setup.sh linuxXX 192.168.17.1XX 24 192.168.17.1
 ./ansible_setup.sh
 
 borrar config: clean.sh; ansible_clean.sh
