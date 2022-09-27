@@ -19,7 +19,7 @@ Dani Hornero            linux06     192.168.17.106
 Lucas Gaiteiro          linux07     192.168.17.107
 Roberto Rodríguez       linux08     192.168.17.108
 Jose Antonio Gonzalez*  linux09     192.168.17.109
-Abel Altisent*          linux11     192.168.17.111
+Abel Altisent           linux11     192.168.17.111
 </pre>
 
 ## Windows setup
