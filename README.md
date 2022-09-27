@@ -11,14 +11,14 @@ Santiago Sojo           windows03   192.168.17.203
 Jorge Mateos            windows04   192.168.17.204
 Marta Marcos            windows05   192.168.17.205
 
-Dani Vila*              linux02     192.168.17.102
+Dani Vila               linux02     192.168.17.102
 Joan Figueras           linux03     192.168.17.103
 Jesús Osorio            linux04     192.168.17.104
 Felipe Roca             linux05     192.168.17.105
 Dani Hornero            linux06     192.168.17.106
 Lucas Gaiteiro          linux07     192.168.17.107
 Roberto Rodríguez       linux08     192.168.17.108
-Jose Antonio Gonzalez*  linux09     192.168.17.109
+Jose Antonio Gonzalez   linux09     192.168.17.109
 Abel Altisent           linux11     192.168.17.111
 </pre>
 
