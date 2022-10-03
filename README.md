@@ -18,8 +18,8 @@ Lucas Gaiteiro          linux07     192.168.17.107
 Roberto Rodríguez       linux08     192.168.17.108
 Jose Antonio Gonzalez   linux09     192.168.17.109
 Abel Altisent           linux10     192.168.17.110
-Santiago Sojo           linux11   192.168.17.111
-Jorge Mateos            linux12   192.168.17.112
+Santiago Sojo           linux11     192.168.17.111
+Jorge Mateos            linux12     192.168.17.112
 </pre>
 
 ## Windows setup
