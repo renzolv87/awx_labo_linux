@@ -7,8 +7,6 @@
 # Servidores de Laboratorio
 <pre>
 Jaime Espallargas       windows02   192.168.17.202
-Santiago Sojo           windows03   192.168.17.203
-Jorge Mateos            windows04   192.168.17.204
 Marta Marcos            windows05   192.168.17.205
 
 Dani Vila               linux02     192.168.17.102
@@ -20,6 +18,8 @@ Lucas Gaiteiro          linux07     192.168.17.107
 Roberto Rodríguez       linux08     192.168.17.108
 Jose Antonio Gonzalez   linux09     192.168.17.109
 Abel Altisent           linux10     192.168.17.110
+Santiago Sojo           linux11   192.168.17.111
+Jorge Mateos            linux12   192.168.17.112
 </pre>
 
 ## Windows setup
