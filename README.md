@@ -7,7 +7,7 @@
 # Servidores de Laboratorio
 <pre>
 Enrique Bellido         windows02   192.168.17.202
-Marcos Sánchez          windows03   192.168.17.205
+Marcos Sánchez          windows03   192.168.17.203
 
 Gonzalo de la Torre     linux02     192.168.17.102
 David Pulido            linux03     192.168.17.103
