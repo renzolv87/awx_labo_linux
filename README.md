@@ -6,20 +6,22 @@
 
 # Servidores de Laboratorio
 <pre>
-Enrique Bellido         windows02   192.168.17.202
-Marcos Sánchez          windows03   192.168.17.203
+Renzo Luján             windows01   192.168.17.201
+                        windows02   192.168.17.202
+                        windows03   192.168.17.203
 
-Gonzalo de la Torre     linux02     192.168.17.102
-David Pulido            linux03     192.168.17.103
-Guillermo Chacón        linux04     192.168.17.104
-Juan Villegas           linux05     192.168.17.105
-Miguel Martinez         linux06     192.168.17.106
-Francisco Simón         linux07     192.168.17.107
-Juan De Dios Navarro    linux08     192.168.17.108
-Miguel Angel Maldonado  linux09     192.168.17.109
-Manuel Arco             linux10     192.168.17.110
-Mª Carmen Delgado       linux11     192.168.17.111
-Carlos Javier Pérez     linux12     192.168.17.112
+Renzo Luján             linux01     192.168.17.101
+Lorenzo Presa           linux02     192.168.17.102
+Carlos Alzaga           linux03     192.168.17.103
+Pablo Bazan             linux04     192.168.17.104
+Daniel Barrio           linux05     192.168.17.105
+Javier Sanchez          linux06     192.168.17.106
+                        linux07     192.168.17.107
+                        linux08     192.168.17.108
+                        linux09     192.168.17.109
+                        linux10     192.168.17.110
+                        linux11     192.168.17.111
+                        linux12     192.168.17.112
 </pre>
 
 ## Windows setup
