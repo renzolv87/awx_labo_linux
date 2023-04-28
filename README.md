@@ -16,7 +16,7 @@ Carlos Alzaga           linux03     192.168.17.103
 Pablo Bazan             linux04     192.168.17.104
 Daniel Barrio           linux05     192.168.17.105
 Javier Sanchez          linux06     192.168.17.106
-                        linux07     192.168.17.107
+Josep Solano            linux07     192.168.17.107
                         linux08     192.168.17.108
                         linux09     192.168.17.109
                         linux10     192.168.17.110
