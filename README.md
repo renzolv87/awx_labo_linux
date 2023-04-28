@@ -7,8 +7,8 @@
 # Servidores de Laboratorio
 <pre>
 Renzo Luján             windows01   192.168.17.201
-                        windows02   192.168.17.202
-                        windows03   192.168.17.203
+Juan Antonio Rochel     windows02   192.168.17.202
+Borja Ventosinos        windows03   192.168.17.203
 
 Renzo Luján             linux01     192.168.17.101
 Lorenzo Presa           linux02     192.168.17.102
