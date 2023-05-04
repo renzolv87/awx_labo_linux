@@ -18,7 +18,7 @@ Daniel Barrio           linux05     192.168.17.105
 Javier Sanchez          linux06     192.168.17.106
 Josep Solano            linux07     192.168.17.107
 Jordi Verges            linux08     192.168.17.108
-                        linux09     192.168.17.109
+Estiven Aparicio        linux09     192.168.17.109
                         linux10     192.168.17.110
                         linux11     192.168.17.111
                         linux12     192.168.17.112
