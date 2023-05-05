@@ -2,12 +2,17 @@
 - hosts: "{{ hosts }}"
   become: true
   tasks:
-    - name: creamos nuestro template
-      template:
-        src: "/var/tmp/linux_file.conf.j2"
-        dest: "/var/tmp/file.conf"
-        owner: root
-        group: root
-        mode: '0644'
-
-
+  - name: copiar un fichero estatico
+    copy:
+      src: /tools/git_repositories/ansible_rlujan/awx_labo_linux/test.conf
+      dest: "/var/tmp/test.conf"
+      owner: root
+      group: root
+      mode: '0644'
+  - name: fichero de configuracion dinamico
+    template:
+      src: /tools/git_repositories/ansible_rlujan/awx_labo_linux/template_ejemplo.j2
+      dest: "/var/tmp/test2.conf"
+      owner: root
+      group: root
+      mode: '0644'
