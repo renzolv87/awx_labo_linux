@@ -11,11 +11,14 @@
         name: httpd
         state: started
         enabled: yes
-    - name: create index.html
-      file:
-        path: /var/www/html/index.html
-        state: touch
     - name: add a line to index.html
       copy:
-        content: "Hello World!"
         dest: /var/www/html/index.html
+        content: |
+          <html>
+          <body>
+          <h1>It works!</h1>
+          Que bonito!
+          Que Bonito!
+          quE bOnitO!
+          </body>
