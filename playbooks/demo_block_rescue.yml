@@ -1,16 +1,23 @@
 ---
 - hosts: "{{ hosts }}"
+  gather_facts: no
   become: true
   tasks:
     - name: validar conexion a apache
       block:
-        - uri:
-            url: "http://{{ hosts }}"
+        - name: La web responde?
+          uri:
+            url: "http://localhost"
       rescue:
-        - service:
+        - name: Asumo que el servicio httpd esta parado, por lo tanto lo levanto
+          service:
             name: httpd
             state: started
       always:
-        - uri:
-            url: "http://{{ hosts }}"
+        - name: La web responde?
+          uri:
+            url: "http://localhost"
+        - name: Muestro un mensaje
+          debug:
+            msg: "funciono!!!"
       
