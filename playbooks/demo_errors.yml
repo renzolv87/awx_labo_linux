@@ -1,9 +1,13 @@
 ---
 - hosts: "{{ hosts }}"
+  gather_facts: no
   become: true
   tasks:
-    - name: get files
+    - name: Check Web Connection
       uri:
-        url: "http://{{ hosts }}"
+        url: "http://localhost"
       ignore_errors: true
+    - name: Continua siguiente tarea
+      debug:
+        msg: "Hola que tal? te funciono el ejercicio?"
    
