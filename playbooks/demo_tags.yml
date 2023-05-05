@@ -13,15 +13,17 @@
         state: started
         enabled: yes
       tags: config
-    - name: create index.html
-      file:
-        path: /var/www/html/index.html
-        state: touch
-      tags: config
     - name: add a line to index.html
       copy:
-        content: "Hello World!"
         dest: /var/www/html/index.html
+        content: |
+          <html>
+          <body>
+          <h1>It works!</h1>
+          Que bonito!
+          Que Bonito!
+          quE bOnitO!
+          </body>
       tags: config
     - name: uninstall apache
       package: 
