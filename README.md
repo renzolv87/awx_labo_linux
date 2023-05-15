@@ -21,7 +21,7 @@ Jordi Verges            linux08     192.168.17.108
 Estiven Aparicio        linux09     192.168.17.109
 Joaquin Aviles          linux10     192.168.17.110
 Victor Vidal            linux11     192.168.17.111
-                        linux12     192.168.17.112
+Marc Fontanals          linux12     192.168.17.112
 </pre>
 
 ## Windows setup
