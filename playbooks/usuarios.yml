@@ -14,3 +14,11 @@
     with_items: "{{ usuarios | from_yaml }}"
 
 #-e usuarios='[{"empleado":"pepe","equipo":"wheel"}]'
+
+#"{{ user_input_var | from_yaml }}"
+
+# ---
+# - empleado: pepe
+#   equipo: wheel
+# - empleado: test
+#   equipo: wheel
