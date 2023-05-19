@@ -1,0 +1,16 @@
+---
+- hosts: "{{ servidores }}"
+  become: true
+  tasks:
+  # - debug:
+  #     var: usuarios
+  - name: creo usuario {{ usuarios.empleado }}
+    user:
+      name: "{{ item.empleado }}"
+      groups: "{{ item.equipo }}"
+      shell: "/bin/bash"
+      comment: "usuario creado por ansible"
+      state: present
+    with_items: "{{ usuarios }}"
+
+#-e usuarios='[{"empleado":"pepe","equipo":"wheel"}]'
