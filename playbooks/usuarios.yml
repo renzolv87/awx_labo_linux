@@ -13,6 +13,8 @@
       state: present
     with_items: "{{ usuarios | from_yaml }}"
 
+#ksajdflkjsadf
+
 #-e usuarios='[{"empleado":"pepe","equipo":"wheel"}]'
 
 #"{{ user_input_var | from_yaml }}"
