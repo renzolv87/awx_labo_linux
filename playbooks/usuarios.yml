@@ -4,7 +4,7 @@
   tasks:
   # - debug:
   #     var: usuarios
-  - name: creo usuario {{ usuarios.empleado }}
+  - name: "creo usuario {{ usuarios.empleado }}"
     user:
       name: "{{ item.empleado }}"
       groups: "{{ item.equipo }}"
