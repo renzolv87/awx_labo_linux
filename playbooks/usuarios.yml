@@ -11,6 +11,6 @@
       shell: "/bin/bash"
       comment: "usuario creado por ansible"
       state: present
-    with_items: "{{ usuarios }}"
+    with_items: "{{ usuarios | from_yaml }}"
 
 #-e usuarios='[{"empleado":"pepe","equipo":"wheel"}]'
